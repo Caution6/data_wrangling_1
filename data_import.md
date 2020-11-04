@@ -1,18 +1,19 @@
 Data Import
 ================
+11/4/2020
 
 ``` r
 library(tidyverse)
 ```
 
-    ## -- Attaching packages ----------------------------------------------------------------------- tidyverse 1.3.0 --
+    ## -- Attaching packages --------------------------------------- tidyverse 1.3.0 --
 
-    ## v ggplot2 3.3.2     v purrr   0.3.4
-    ## v tibble  3.0.3     v dplyr   1.0.2
-    ## v tidyr   1.1.2     v stringr 1.4.0
-    ## v readr   1.3.1     v forcats 0.5.0
+    ## √ ggplot2 3.3.2     √ purrr   0.3.4
+    ## √ tibble  3.0.4     √ dplyr   1.0.2
+    ## √ tidyr   1.1.2     √ stringr 1.4.0
+    ## √ readr   1.4.0     √ forcats 0.5.0
 
-    ## -- Conflicts -------------------------------------------------------------------------- tidyverse_conflicts() --
+    ## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
     ## x dplyr::filter() masks stats::filter()
     ## x dplyr::lag()    masks stats::lag()
 
@@ -29,7 +30,8 @@ Read in the litters dataset.
 litters_df = read_csv("./data/FAS_litters.csv")
 ```
 
-    ## Parsed with column specification:
+    ## 
+    ## -- Column specification --------------------------------------------------------
     ## cols(
     ##   Group = col_character(),
     ##   `Litter Number` = col_character(),
@@ -44,6 +46,31 @@ litters_df = read_csv("./data/FAS_litters.csv")
 ``` r
 litters_df = janitor::clean_names(litters_df)
 ```
+
+    ## Warning in FUN(X[[i]], ...): strings not representable in native encoding will
+    ## be translated to UTF-8
+
+    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00C4>' to native encoding
+
+    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00D6>' to native encoding
+
+    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00E4>' to native encoding
+
+    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00F6>' to native encoding
+
+    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00DF>' to native encoding
+
+    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00C6>' to native encoding
+
+    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00E6>' to native encoding
+
+    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00D8>' to native encoding
+
+    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00F8>' to native encoding
+
+    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00C5>' to native encoding
+
+    ## Warning in FUN(X[[i]], ...): unable to translate '<U+00E5>' to native encoding
 
 ## Take a look at the data
 
@@ -174,7 +201,8 @@ litters_base = read.csv("./data/FAS_litters.csv")
 litters_readr = read_csv("./data/FAS_litters.csv")
 ```
 
-    ## Parsed with column specification:
+    ## 
+    ## -- Column specification --------------------------------------------------------
     ## cols(
     ##   Group = col_character(),
     ##   `Litter Number` = col_character(),
